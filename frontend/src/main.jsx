@@ -1,5 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { createRoot } from "react-dom/client";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import logoImage from "./logo.png";
 import { 
   AlertTriangle, 
   CheckCircle2, 
@@ -134,9 +136,16 @@ function App() {
     <main className="app-shell">
       <section className="workspace">
         <header className="topbar">
-          <div>
-            <p className="eyebrow">Visual Drawing Review</p>
-            <h1>i2i - comparisons</h1>
+          <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+            <img 
+              src={logoImage} 
+              alt="Logo" 
+              style={{ width: "56px", height: "56px", objectFit: "cover", borderRadius: "14px", border: "2px solid #ebf0ec", boxShadow: "0 2px 8px rgba(0,0,0,0.05)" }} 
+            />
+            <div>
+              <h1>i2i - comparisons</h1>
+              <p className="eyebrow" style={{ marginTop: "12px" }}>AI-Based image difference detection , visualization, and automated change summarization </p>
+            </div>
           </div>
           {result && (
             <div className="download-group">
@@ -153,8 +162,8 @@ function App() {
         </header>
 
         <section className="upload-grid">
-          <Uploader label="Original drawing sheet (Revision A)" file={reference} onChange={setReference} />
-          <Uploader label="Updated drawing sheet (Revision B)" file={comparison} onChange={setComparison} />
+          <Uploader label="Original" file={reference} onChange={setReference} />
+          <Uploader label="Updated" file={comparison} onChange={setComparison} />
         </section>
 
         <div className="run-row">
@@ -176,7 +185,7 @@ function App() {
           )}
         </div>
 
-        {result ? <ReportView result={result} /> : <EmptyState />}
+        {loading ? <LoadingState /> : result ? <ReportView result={result} /> : <EmptyState />}
       </section>
     </main>
   );
@@ -508,13 +517,27 @@ function Visual({ title, src, wide = false, onZoom }) {
 
 function EmptyState() {
   return (
-    <section className="empty-state">
-      <div>
-        <p className="eyebrow">Ready for comparison</p>
-        <h2>Select drawing sheets to compile a client revision report.</h2>
-        <p>
-          Compare original and updated sheets automatically. This generates a multi-page executive summary, summary tables, annotated crops, and a collapsible technical appendix.
-        </p>
+    <section className="empty-state center-content">
+      <div className="lottie-container">
+        <DotLottieReact
+          src="/animation.json"
+          loop
+          autoplay
+        />
+      </div>
+    </section>
+  );
+}
+
+function LoadingState() {
+  return (
+    <section className="empty-state center-content">
+      <div className="lottie-container">
+        <DotLottieReact
+          src="/loading.json"
+          loop
+          autoplay
+        />
       </div>
     </section>
   );
