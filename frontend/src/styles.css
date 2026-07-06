@@ -73,16 +73,32 @@ h2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+@keyframes uploadPulse {
+  0% { box-shadow: 0 0 0 0 rgba(110, 142, 117, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(110, 142, 117, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(110, 142, 117, 0); }
+}
+
 .upload-panel {
   min-height: 150px;
   padding: 22px;
-  border: 1px dashed #9cafa0;
+  border: 2px dashed #9cafa0;
   border-radius: 8px;
   background: #ebf0ec;
   display: grid;
   align-content: center;
   gap: 8px;
   cursor: pointer;
+  transition: all 0.3s ease;
+  animation: uploadPulse 2s infinite;
+}
+
+.upload-panel:hover {
+  transform: translateY(-4px);
+  border-color: #6e8e75;
+  background: #e1e8e2;
+  animation: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
 }
 
 .upload-panel input {
@@ -125,6 +141,28 @@ h2 {
   color: #233027;
   background: #6e8e75;
   cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+@keyframes pulseButton {
+  0% {
+    box-shadow: 0 0 0 0 rgba(110, 142, 117, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(110, 142, 117, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(110, 142, 117, 0);
+  }
+}
+
+.primary-button:not(:disabled) {
+  animation: pulseButton 2s infinite;
+}
+
+.primary-button:not(:disabled):hover {
+  transform: scale(1.02);
+  background: #5c7962;
 }
 
 .primary-button:disabled {
@@ -132,9 +170,27 @@ h2 {
   cursor: not-allowed;
 }
 
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(0.9) translateY(10px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
 .icon-action {
   color: #4a6051;
   background: #c0d6c5;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, pulseButton 2s infinite 0.4s;
+}
+
+.icon-action:hover {
+  transform: translateY(-2px);
+  background: #a9c4af;
+  box-shadow: 0 4px 12px rgba(110, 142, 117, 0.2);
+}
+
+.icon-action:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(110, 142, 117, 0.2);
 }
 
 .status {
@@ -163,7 +219,6 @@ h2 {
   }
 }
 
-.empty-state,
 .summary-panel,
 .region-register,
 .metric,
@@ -175,9 +230,29 @@ h2 {
 
 .empty-state {
   min-height: 300px;
-  display: grid;
-  align-items: end;
-  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.lottie-container {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 820px) {
+  .empty-state {
+    padding: 20px 16px;
+  }
+  .lottie-container {
+    max-width: 200px;
+    margin-bottom: 16px;
+  }
 }
 
 .empty-state p,
