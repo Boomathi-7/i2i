@@ -498,7 +498,7 @@ def _align_image(reference: np.ndarray, comparison: np.ndarray, roi_mask: np.nda
 
 
 def _matched_feature_points(gray_ref: np.ndarray, gray_cmp: np.ndarray, roi_mask: np.ndarray = None) -> tuple[np.ndarray, np.ndarray]:
-    detector = cv2.AKAZE_create()
+    detector = getattr(cv2, 'AKAZE_create', lambda: cv2.ORB_create(5000))()
     kp1, des1 = detector.detectAndCompute(gray_ref, roi_mask)
     kp2, des2 = detector.detectAndCompute(gray_cmp, roi_mask)
     if des1 is None or des2 is None or len(kp1) < 10 or len(kp2) < 10:

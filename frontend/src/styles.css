@@ -1,6 +1,6 @@
 :root {
-  color: #17211f;
-  background: #eef3f1;
+  color: #233027;
+  background: #ebf0ec;
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.5;
 }
@@ -38,7 +38,7 @@ input {
 
 .eyebrow {
   margin: 0 0 5px;
-  color: #0f766e;
+  color: #6e8e75;
   font-size: 0.78rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -76,9 +76,9 @@ h2 {
 .upload-panel {
   min-height: 150px;
   padding: 22px;
-  border: 1px dashed #78918b;
+  border: 1px dashed #9cafa0;
   border-radius: 8px;
-  background: #fbfdfc;
+  background: #ebf0ec;
   display: grid;
   align-content: center;
   gap: 8px;
@@ -92,7 +92,7 @@ h2 {
 }
 
 .upload-panel span {
-  color: #52635f;
+  color: #9cafa0;
 }
 
 .upload-panel strong {
@@ -122,8 +122,8 @@ h2 {
 }
 
 .primary-button {
-  color: #ffffff;
-  background: #0f766e;
+  color: #233027;
+  background: #6e8e75;
   cursor: pointer;
 }
 
@@ -133,8 +133,8 @@ h2 {
 }
 
 .icon-action {
-  color: #0f3f3a;
-  background: #d7ebe7;
+  color: #4a6051;
+  background: #c0d6c5;
 }
 
 .status {
@@ -150,7 +150,7 @@ h2 {
 }
 
 .success {
-  color: #0f766e;
+  color: #6e8e75;
 }
 
 .spin {
@@ -168,7 +168,7 @@ h2 {
 .region-register,
 .metric,
 .visual {
-  border: 1px solid #d7e1df;
+  border: 1px solid #ebf0ec;
   border-radius: 8px;
   background: #ffffff;
 }
@@ -183,7 +183,7 @@ h2 {
 .empty-state p,
 .summary-panel p,
 .muted {
-  color: #52635f;
+  color: #9cafa0;
 }
 
 .results {
@@ -206,7 +206,7 @@ h2 {
 
 .metric span {
   display: block;
-  color: #52635f;
+  color: #9cafa0;
   font-size: 0.86rem;
   font-weight: 700;
 }
@@ -237,12 +237,12 @@ h2 {
   width: 100%;
   max-height: 560px;
   object-fit: contain;
-  background: #101817;
+  background: #233027;
 }
 
 .visual figcaption {
   padding: 11px 14px;
-  color: #33413e;
+  color: #233027;
   font-weight: 800;
 }
 
@@ -255,14 +255,14 @@ table {
 
 th,
 td {
-  border-bottom: 1px solid #e3e9e7;
+  border-bottom: 1px solid #ebf0ec;
   padding: 10px 8px;
   text-align: left;
   vertical-align: top;
 }
 
 th {
-  color: #0f3f3a;
+  color: #4a6051;
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0;
@@ -301,7 +301,7 @@ th {
 .tab-navigation {
   display: flex;
   gap: 12px;
-  border-bottom: 2px solid #d7e1df;
+  border-bottom: 2px solid #ebf0ec;
   margin: 18px 0;
   padding-bottom: 2px;
 }
@@ -311,19 +311,19 @@ th {
   border: none;
   padding: 10px 16px;
   font-weight: 700;
-  color: #52635f;
+  color: #9cafa0;
   cursor: pointer;
   border-bottom: 3px solid transparent;
   transition: all 0.2s ease;
 }
 
 .tab-button:hover {
-  color: #0f766e;
+  color: #6e8e75;
 }
 
 .tab-button.active {
-  color: #0f766e;
-  border-bottom-color: #0f766e;
+  color: #6e8e75;
+  border-bottom-color: #6e8e75;
 }
 
 /* Zoomable Visual Wrapper */
@@ -336,7 +336,7 @@ th {
   position: absolute;
   top: 12px;
   right: 12px;
-  background: rgba(16, 24, 23, 0.75);
+  background: rgba(27, 38, 49, 0.75);
   color: white;
   border: none;
   border-radius: 4px;
@@ -356,7 +356,7 @@ th {
 }
 
 .zoom-btn:hover {
-  background: rgba(15, 118, 110, 0.9);
+  background: rgba(31, 97, 141, 0.9);
 }
 
 /* Explorer Container Layout */
@@ -369,7 +369,7 @@ th {
 
 .explorer-list,
 .explorer-details {
-  border: 1px solid #d7e1df;
+  border: 1px solid #ebf0ec;
   border-radius: 8px;
   background: #ffffff;
   padding: 22px;
@@ -391,16 +391,16 @@ th {
 }
 
 .explorer-row:hover {
-  background-color: #f1f5f4;
+  background-color: #ebf0ec;
 }
 
 .explorer-row.selected {
-  background-color: #e2edea;
+  background-color: #c0d6c5;
 }
 
 .explorer-row.selected td {
   font-weight: bold;
-  color: #0f766e;
+  color: #6e8e75;
 }
 
 /* Severity Tag Badge */
@@ -424,8 +424,8 @@ th {
 }
 
 .severity-tag.minor {
-  background-color: #ccfbf1;
-  color: #0f766e;
+  background-color: #c0d6c5;
+  color: #6e8e75;
 }
 
 /* Details and Crops Grid */
@@ -435,7 +435,7 @@ th {
   gap: 12px;
   margin-bottom: 24px;
   padding: 14px;
-  background: #f8fafc;
+  background: #ebf0ec;
   border-radius: 6px;
   font-size: 0.88rem;
 }
@@ -452,10 +452,10 @@ th {
 
 .crop-item {
   margin: 0;
-  border: 1px solid #e3e9e7;
+  border: 1px solid #ebf0ec;
   border-radius: 6px;
   overflow: hidden;
-  background: #fdfdfd;
+  background: #ffffff;
   cursor: pointer;
 }
 
@@ -464,8 +464,8 @@ th {
   width: 100%;
   height: 160px;
   object-fit: contain;
-  background: #f1f5f4;
-  border-bottom: 1px solid #e3e9e7;
+  background: #ebf0ec;
+  border-bottom: 1px solid #ebf0ec;
   transition: transform 0.2s ease;
 }
 
@@ -477,7 +477,7 @@ th {
   padding: 8px 12px;
   font-size: 0.82rem;
   font-weight: 700;
-  color: #33413e;
+  color: #233027;
   text-align: center;
 }
 
@@ -534,7 +534,7 @@ th {
 
 /* Executive Summary & Hero Layout */
 .report-hero {
-  border-left: 6px solid #0f766e;
+  border-left: 6px solid #6e8e75;
   padding: 26px;
   background: #ffffff;
   border-radius: 8px;
@@ -549,12 +549,12 @@ th {
 }
 
 .hero-icon {
-  color: #0f766e;
+  color: #6e8e75;
 }
 
 .summary-text {
   font-size: 1.05rem;
-  color: #33413e;
+  color: #233027;
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -563,7 +563,7 @@ th {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
-  border-top: 1px solid #e3e9e7;
+  border-top: 1px solid #ebf0ec;
   padding-top: 20px;
 }
 
@@ -577,12 +577,12 @@ th {
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: #6b7c78;
+  color: #9cafa0;
 }
 
 .exec-item strong {
   font-size: 1.1rem;
-  color: #111827;
+  color: #233027;
 }
 
 /* Premium Statistics Cards */
@@ -609,7 +609,7 @@ th {
 .metric-label {
   font-size: 0.85rem;
   font-weight: 700;
-  color: #4b5563;
+  color: #9cafa0;
   text-transform: uppercase;
 }
 
@@ -623,7 +623,7 @@ th {
 
 .chart-card {
   background: #ffffff;
-  border: 1px solid #d7e1df;
+  border: 1px solid #ebf0ec;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
@@ -633,7 +633,7 @@ th {
   margin: 0 0 16px;
   font-size: 1rem;
   font-weight: bold;
-  color: #0f3f3a;
+  color: #4a6051;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -653,7 +653,7 @@ th {
 
 .bar-row .label {
   width: 130px;
-  color: #4b5563;
+  color: #9cafa0;
   font-weight: 600;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -663,7 +663,7 @@ th {
 .bar-track {
   flex-grow: 1;
   height: 12px;
-  background-color: #f1f5f4;
+  background-color: #ebf0ec;
   border-radius: 6px;
   overflow: hidden;
 }
@@ -681,20 +681,20 @@ th {
 .bar-fill.medium-conf { background-color: #eab308; }
 .bar-fill.low-conf { background-color: #ef4444; }
 
-.bar-fill.drawing-upper { background-color: #3b82f6; }
+.bar-fill.drawing-upper { background-color: #6e8e75; }
 .bar-fill.drawing-lower { background-color: #8b5cf6; }
 
 .bar-row .count {
   width: 25px;
   text-align: right;
   font-weight: bold;
-  color: #111827;
+  color: #233027;
 }
 
 /* Table styling updates */
 .block-card {
   background: #ffffff;
-  border: 1px solid #d7e1df;
+  border: 1px solid #ebf0ec;
   border-radius: 8px;
   padding: 22px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
@@ -708,12 +708,12 @@ th {
 .type-badge {
   display: inline-block;
   padding: 3px 10px;
-  background-color: #f1f5f9;
-  color: #334155;
+  background-color: #ebf0ec;
+  color: #9cafa0;
   border-radius: 4px;
   font-size: 0.78rem;
   font-weight: 700;
-  border: 1px solid #cbd5e1;
+  border: 1px solid #9cafa0;
 }
 
 /* Individual Change Cards */
@@ -726,7 +726,7 @@ th {
 
 .change-card {
   background: #ffffff;
-  border: 1px solid #d7e1df;
+  border: 1px solid #ebf0ec;
   border-radius: 8px;
   padding: 22px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
@@ -738,7 +738,7 @@ th {
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
-  border-bottom: 1px solid #e3e9e7;
+  border-bottom: 1px solid #ebf0ec;
   padding-bottom: 14px;
   margin-bottom: 14px;
 }
@@ -752,14 +752,14 @@ th {
 .id-badge {
   font-size: 1.05rem;
   font-weight: 900;
-  color: #0f766e;
+  color: #6e8e75;
 }
 
 .type-badge-large {
   padding: 4px 12px;
-  background-color: #eff6ff;
-  color: #1e40af;
-  border: 1px solid #bfdbfe;
+  background-color: #c0d6c5;
+  color: #6e8e75;
+  border: 1px solid #c0d6c5;
   border-radius: 6px;
   font-size: 0.8rem;
   font-weight: 800;
@@ -783,43 +783,43 @@ th {
 
 .explanation-bubble {
   font-size: 0.92rem;
-  color: #374151;
-  background-color: #f8fafc;
+  color: #233027;
+  background-color: #ebf0ec;
   padding: 12px 16px;
   border-radius: 6px;
-  border-left: 4px solid #1e40af;
+  border-left: 4px solid #6e8e75;
   margin: 12px 0 16px;
   line-height: 1.5;
 }
 
 .card-metrics {
   margin-top: 16px;
-  background: #fafbfb;
-  border: 1px solid #e3e9e7;
+  background: #ebf0ec;
+  border: 1px solid #ebf0ec;
 }
 
 /* Page-by-page Report UI Styles */
 .report-stepper-tabs {
   justify-content: flex-start;
-  border-bottom: 2px solid #e2e8f0;
+  border-bottom: 2px solid #9cafa0;
   margin-bottom: 24px;
 }
 
 .report-stepper-tabs .tab-button {
   font-size: 0.95rem;
   padding: 12px 20px;
-  color: #64748b;
+  color: #9cafa0;
   border-bottom: 3px solid transparent;
 }
 
 .report-stepper-tabs .tab-button.active {
-  color: #0f766e;
-  border-bottom-color: #0f766e;
+  color: #6e8e75;
+  border-bottom-color: #6e8e75;
 }
 
 .report-page-card {
   background: #ffffff;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #9cafa0;
   border-radius: 8px;
   padding: 32px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
@@ -827,30 +827,30 @@ th {
 
 .report-page-card h2 {
   font-size: 1.6rem;
-  color: #0f3f3a;
+  color: #4a6051;
   margin-top: 0;
   margin-bottom: 12px;
-  border-bottom: 2px solid #f1f5f9;
+  border-bottom: 2px solid #ebf0ec;
   padding-bottom: 10px;
 }
 
 .summary-banner-text {
   font-size: 1.2rem;
-  color: #33413e;
+  color: #233027;
   line-height: 1.6;
   margin-bottom: 24px;
 }
 
 .description-text {
   font-size: 1rem;
-  color: #4b5563;
+  color: #9cafa0;
   margin-bottom: 20px;
 }
 
 /* Conclusion and signatures */
 .conclusion-block {
-  background: #eff6ff;
-  border-left: 6px solid #1d4ed8;
+  background: #c0d6c5;
+  border-left: 6px solid #6e8e75;
   padding: 24px;
   border-radius: 6px;
   margin-bottom: 30px;
@@ -859,7 +859,7 @@ th {
 .summary-paragraph {
   font-size: 1.15rem;
   line-height: 1.7;
-  color: #1e3a8a;
+  color: #4a6051;
   margin: 0;
 }
 
@@ -869,7 +869,7 @@ th {
   gap: 12px;
   max-width: 400px;
   margin-top: 40px;
-  border-top: 1px dashed #cbd5e1;
+  border-top: 1px dashed #9cafa0;
   padding-top: 24px;
 }
 
@@ -881,12 +881,12 @@ th {
 
 .sign-line .label {
   font-weight: 700;
-  color: #64748b;
+  color: #9cafa0;
 }
 
 .sign-line .value {
   font-weight: 700;
-  color: #334155;
+  color: #9cafa0;
 }
 
 .sign-line .value.status-pending {
@@ -896,7 +896,7 @@ th {
 /* Collapsible Technical Details */
 .technical-details-section {
   margin-top: 40px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #9cafa0;
   border-radius: 6px;
   background: #ffffff;
   overflow: hidden;
@@ -908,29 +908,29 @@ th {
   justify-content: space-between;
   align-items: center;
   padding: 16px 20px;
-  background: #f8fafc;
+  background: #ebf0ec;
   border: none;
   cursor: pointer;
   font-size: 0.95rem;
   font-weight: 700;
-  color: #334155;
+  color: #9cafa0;
   transition: background 0.15s ease;
 }
 
 .tech-details-toggle:hover {
-  background: #f1f5f9;
+  background: #ebf0ec;
 }
 
 .toggle-label {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #475569;
+  color: #9cafa0;
 }
 
 .tech-details-panel {
   padding: 20px;
-  border-top: 1px solid #e2e8f0;
+  border-top: 1px solid #9cafa0;
   background: #ffffff;
 }
 
@@ -944,25 +944,25 @@ th {
 .tech-table th,
 .tech-table td {
   padding: 10px 12px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #9cafa0;
   text-align: left;
 }
 
 .tech-table th {
-  background-color: #f1f5f9;
-  color: #475569;
+  background-color: #ebf0ec;
+  color: #9cafa0;
   font-weight: 700;
 }
 
 .tech-table tr:nth-child(even) {
-  background-color: #f8fafc;
+  background-color: #ebf0ec;
 }
 
 /* Helper modifiers */
 .font-accent {
-  color: #0f766e !important;
+  color: #6e8e75 !important;
 }
 
 .shadow-accent {
-  border-top: 3px solid #0f766e;
+  border-top: 3px solid #6e8e75;
 }
