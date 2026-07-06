@@ -136,15 +136,15 @@ function App() {
         <header className="topbar">
           <div>
             <p className="eyebrow">Visual Drawing Review</p>
-            <h1>Engineering drawing comparison report</h1>
+            <h1>i2i - comparisons</h1>
           </div>
           {result && (
             <div className="download-group">
-              <a className="icon-action" href={absoluteUrl(result.outputs.report_pdf)} target="_blank" rel="noreferrer" title="Download PDF Report">
+              <a className="icon-action" href={absoluteUrl(result.outputs.report_pdf)} onClick={(e) => { e.preventDefault(); handleDownload(absoluteUrl(result.outputs.report_pdf), 'comparison_report.pdf'); }} title="Download PDF Report">
                 <Download size={18} />
                 PDF Report
               </a>
-              <a className="icon-action" href={absoluteUrl(result.outputs.report_html)} target="_blank" rel="noreferrer" title="Download HTML Report">
+              <a className="icon-action" href={absoluteUrl(result.outputs.report_html)} onClick={(e) => { e.preventDefault(); handleDownload(absoluteUrl(result.outputs.report_html), 'comparison_report.html'); }} title="Download HTML Report">
                 <Download size={18} />
                 HTML Report
               </a>
@@ -524,6 +524,25 @@ function absoluteUrl(path) {
   if (!path) return "";
   if (path.startsWith("http")) return path;
   return `${API_BASE}${path}`;
+}
+
+async function handleDownload(url, filename) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error("Network response was not ok");
+    const blob = await response.blob();
+    const objectUrl = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = objectUrl;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(objectUrl);
+  } catch (e) {
+    console.error("Failed to download file:", e);
+    window.open(url, "_blank");
+  }
 }
 
 createRoot(document.getElementById("root")).render(<App />);
