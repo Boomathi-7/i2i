@@ -202,7 +202,7 @@ function Uploader({ label, file, onChange }) {
       />
       <FileImage size={26} />
       <span>{label}</span>
-      <strong>{file ? file.name : "Select drawing file (PDF or Image)"}</strong>
+      <strong>{file ? file.name : "Formats: png, jpg, jpeg, pdf"}</strong>
     </label>
   );
 }
